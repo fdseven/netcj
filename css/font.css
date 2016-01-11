@@ -1,0 +1,43 @@
+@charset "UTF-8";
+/* CSS Document */
+
+@font-face {
+	font-family: "gotham-narrow-bold";
+	src: url("../fonts/gothamnarrow-bold.eot");
+	src: url("../fonts/gothamnarrow-bold.eot#iefix") format("embedded-opentype"),
+	url("../fonts/gothamnarrow-bold.woff") format("woff"),
+	url("../fonts/gothamnarrow-bold.ttf") format("truetype"),
+	url("../fonts/gothamnarrow-bold.svg") format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: "gotham-narrow-medium";
+	src: url("../fonts/gothamnarrow-medium.eot");
+	src: url("../fonts/gothamnarrow-medium.eot#iefix") format("embedded-opentype"),
+	url("../fonts/gothamnarrow-medium.woff") format("woff"),
+	url("../fonts/gothamnarrow-medium.ttf") format("truetype"),
+	url("../fonts/gothamnarrow-medium.svg") format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: "gotham-narrow-book";
+	src: url("../fonts/gothamnarrow-book.eot");
+	src: url("../fonts/gothamnarrow-book.eot#iefix") format("embedded-opentype"),
+	url("../fonts/gothamnarrow-book.woff") format("woff"),
+	url("../fonts/gothamnarrow-book.ttf") format("truetype"),
+	url("../fonts/gothamnarrow-book.svg") format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: "gotham-narrow-light";
+	src: url("../fonts/gothamnarrow-light.eot");
+	src: url("../fonts/gothamnarrow-light.eot#iefix") format("embedded-opentype"),
+	url("../fonts/gothamnarrow-light.woff") format("woff"),
+	url("../fonts/gothamnarrow-light.ttf") format("truetype"),
+	url("../fonts/gothamnarrow-light.svg") format("svg");
+	font-weight: normal;
+	font-style: normal;
+}

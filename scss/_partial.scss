@@ -1,0 +1,188 @@
+/*--------------------------------------------------------------------------------*/
+/*VARIABLE*/
+/*--------------------------------------------------------------------------------*/
+$bg_body: #d8d8d8;
+// $link_color: #0088AA;
+$link_color: #2348CC;
+// $link_hover_color: #333;
+$link_hover_color: #E62129;
+$grey1: #f2f2f2;
+$grey2: #e7e9ea;
+$green1: #00ffb0;
+$green2: #70bc29;
+// $blue: #007EA8;
+$blue: #2348CC;
+$light_blue: #058AFF;
+$red: #d0021b;
+$fb: #3D5B97;
+$tw: #25AEEB;
+$gp: #D14036;
+$gutter: 15px;
+$lebar_menu: 320px;
+
+$font_bold: gotham-narrow-bold;
+$font_medium: gotham-narrow-medium;
+$font_book: gotham-narrow-book;
+$font_light: gotham-narrow-light;
+
+/*--------------------------------------------------------------------------------*/
+/*HELPER*/
+/*--------------------------------------------------------------------------------*/
+$padding: pd;
+
+$pd-list: (
+  5   	5px,
+  10    10px,
+  15    15px,
+  20	20px,
+  30	30px
+);
+
+/*--------------------------------------------------------------------------------*/
+/*RESPONSIVE BOX*/
+/*--------------------------------------------------------------------------------*/
+$prefix: box;
+
+$box-list: (
+  169   		56.25%,
+  43    		75%,
+  34    		133%,
+  hl			62.25%,
+  hl_promo		31.25%
+);
+
+/*--------------------------------------------------------------------------------*/
+/*CATEGORY LIST*/
+/*--------------------------------------------------------------------------------*/
+$cat: cat;
+
+$cat-list: (
+  travel   		#e62229,
+  hobby    		#3ac208,
+  politics    	#ad7341,
+  fashion		#1466c5,
+  culinary		#753fea,
+  culture		#ff7000
+);
+
+/*--------------------------------------------------------------------------------*/
+/*MIXIN*/
+/*--------------------------------------------------------------------------------*/
+@mixin rounded-corner($radius: 15px) {
+	-webkit-border-radius: $radius;
+	   -moz-border-radius: $radius;
+		 -o-border-radius: $radius;
+			border-radius: $radius;
+}
+@mixin blur-radius($radius: 25px) {
+	-webkit-filter: blur($radius);
+	   -moz-filter: blur($radius);
+		 -o-filter: blur($radius);
+		-ms-filter: blur($radius);
+			filter: blur($radius);
+}
+@mixin box-shadow($args...) {
+	-webkit-box-shadow: $args;
+	   -moz-box-shadow: $args;
+		 -o-box-shadow: $args;
+		-ms-box-shadow: $args;
+			box-shadow: $args;
+}
+
+$trans: transform;
+$add: (
+  -webkit-transition-property   -webkit-,
+  	 -moz-transition-property   -moz-,
+	  -ms-transition-property	-ms-,
+	   -o-transition-property	-o-
+);
+
+@mixin transition-property($args...) {
+	@each $value in $add {
+	  #{nth($value, 1)} : $args, nth($value, 2)#{$trans};
+	}
+	transition-property : $args, #{$trans};
+}
+
+$add2: (
+  -webkit-transition   -webkit-,
+  	 -moz-transition   -moz-,
+	  -ms-transition   -ms-,
+	   -o-transition   -o-
+);
+
+@mixin transition($args...) {
+	-webkit-transition: $args;
+	   -moz-transition: $args;
+		-ms-transition: $args;
+		 -o-transition: $args;
+			transition: $args;
+}
+
+@mixin transition2($args...) {
+	@each $value in $add2 {
+	  #{nth($value, 1)} : $args, nth($value, 2)#{$trans} 0.3s;
+	}
+	transition : $args, #{$trans} 0.3s;
+}
+
+@mixin transition3($args...) {
+	@each $value in $add2 {
+	  #{nth($value, 1)} : nth($value, 2)#{$trans} 0.5s, $args;
+	}
+	transition : #{$trans} 0.5s, $args;
+}
+
+@mixin transition-duration($args...) {
+	-webkit-transition-duration: $args;
+	   -moz-transition-duration: $args;
+		-ms-transition-duration: $args;
+		 -o-transition-duration: $args;
+			transition-duration: $args;
+}
+
+@mixin transition_opt($opt1, $opt2, $opt3, $opt4) {
+	-webkit-transition: $opt1 $opt2 $opt3 $opt4;
+	   -moz-transition: $opt1 $opt2 $opt3 $opt4;
+		-ms-transition: $opt1 $opt2 $opt3 $opt4;
+		 -o-transition: $opt1 $opt2 $opt3 $opt4;
+			transition: $opt1 $opt2 $opt3 $opt4;
+}
+
+@mixin transition-delay($args...) {
+	-webkit-transition-delay: $args;
+	   -moz-transition-delay: $args;
+		-ms-transition-delay: $args;
+		 -o-transition-delay: $args;
+			transition-delay: $args;
+}
+
+@mixin transition-timing-function($args...) {
+	-webkit-transition-timing-function: $args;
+	   -moz-transition-timing-function: $args;
+		-ms-transition-timing-function: $args;
+		 -o-transition-timing-function: $args;
+			transition-timing-function: $args;
+}
+
+@mixin transform($args...) {
+	-webkit-transform: $args;
+	   -moz-transform: $args;
+		-ms-transform: $args;
+		 -o-transform: $args;
+			transform: $args;
+}
+
+@mixin transform-origin($args...) {
+	-webkit-transform-origin: $args;
+	   -moz-transform-origin: $args;
+		-ms-transform-origin: $args;
+		 -o-transform-origin: $args;
+			transform-origin: $args;
+}
+@mixin transitionfix() {
+    -webkit-backface-visibility: hidden;
+       -moz-backface-visibility: hidden;
+   			  -webkit-transform: translate3d(0, 0, 0);
+    			 -moz-transform: translate3d(0, 0, 0);
+}
